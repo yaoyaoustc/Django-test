@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "/Users/yaoyao/anaconda3/envs/webproject/bin/python",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
+}
