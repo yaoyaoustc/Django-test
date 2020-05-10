@@ -1,6 +1,23 @@
 from selenium import webdriver
+import unittest
 
-brower = webdriver.Chrome()
-brower.get('http://localhost:8020')
+class NewVisitorTest(unittest.TestCase):
+    def setUp(self):
+        self.browser = webdriver.Chrome()
+        self.browser.implicitly_wait(3)
+    
+    def tearDown(self):
+        self.browser.quit()
+    
+    def test_can_start_a_list_and_retrieve_it_later(self):
+        # user check out homepage
+        self.browser.get('http://localhost:8020')
 
-assert 'Django' in brower.title
+        # user checkout page title 
+        self.assertIn('To-Do', self.browser.title)
+        self.fail('test finished!')
+        
+        # other flows
+        
+if __name__ == '__main__':
+    unittest.main(warnings='ignore')

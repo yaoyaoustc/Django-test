@@ -1,5 +1,6 @@
 # Django-test
-get a taste of Django app with TDD mindset. Probably will work for me
+get a taste of Django app with the TDD mindset. Probably will work for me
+
 first need to install chromedriver
 use 
 ```python
@@ -10,4 +11,12 @@ use
 ```python
 brew cask upgrade chromedriver
 ```
- to update chromedriver
+to run Django:
+```bash
+python manage.py runserver 8020
+```
+
+to run the app:
+```bash
+python xxx.py
+```
